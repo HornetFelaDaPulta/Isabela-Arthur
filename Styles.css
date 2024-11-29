@@ -1,0 +1,85 @@
+body {
+    background-color: #2E2E2E;
+    color: #E0E0E0;
+    font-family: Arial, sans-serif;
+}
+
+
+.title {
+    color: #FF6347;
+    font-size: 36px;
+    font-family: 'Lucida Handwriting', cursive;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #FF4500;
+    box-shadow: 0 0 10px #FF4500;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+
+.mySlides img {
+    width: 100%;
+}
+
+
+.romantic-text {
+    text-align: center;
+    margin: 20px;
+    color: #FFD700;
+}
+
+
+.white-text p {
+    color: #FFFFFF;
+}
+
+
+.separator {
+    display: block;
+    margin: 20px auto;
+    width: 400%;
+}
+
+
+.mini-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #FFD700;
+}
+
+
+.time-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.time-container p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #ADD8E6;
+    border: 2px solid #4682B4;
+    padding: 5px;
+    display: block;
+    width: 150px;
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+
+
+
+
+

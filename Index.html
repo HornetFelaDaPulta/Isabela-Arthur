@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur e Isa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="MeuAmor1.jpg" alt="Foto 1">
+        </div>
+        <div class="mySlides">
+            <img src="MeuAmor2.jpg" alt="Foto 2">
+        </div>
+        <div class="mySlides">
+            <img src="MeuAmor3.jpg" alt="Foto 3">
+        </div>
+        <div class="mySlides">
+            <img src="MeuAmor4.jpg" alt="Foto 4">
+        </div>
+    </div>
+
+
+    <div class="title">Arthur e Isa</div>
+
+
+    <div class="romantic-text">
+        <p>Como você é linda, minha querida!</p>
+        <p>Como você é perfeita!</p>
+        <p>Desça comigo dos montes Líbanos,</p>
+        <p>minha noiva!</p>
+        <p>Desça do alto dos montes,</p>
+        <p>do Amanar, do Senir e do Hermom</p>
+        <p>Onde vivem os leões e leopardos.</p>
+        <p>*Cânticos 4:7-8*</p>
+        <span class="white-text">
+            <p>VOCÊ, MEU AMOR, MINHA VIDA</p>
+            <p>SEMPRE VOU TE AMAR, NUNCA VOU DESISTIR</p>
+            <p>ESTOU VIVO POR SUA CAUSA!</p>
+        </span>
+    </div>
+
+
+    <div class="mini-title">Juntos há</div>
+
+
+    <div class="time-container">
+        <p id="years"></p>
+        <p id="months"></p>
+        <p id="days"></p>
+        <p id="hours"></p>
+        <p id="minutes"></p>
+        <p id="seconds"></p>
+    </div>
+
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3600);
+        }
+
+
+        function calculateTime() {
+            const startDate = new Date('2024-02-28');
+            const now = new Date();
+            const difference = now - startDate;
+
+
+            const years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
+            const months = Math.floor((difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+            const days = Math.floor((difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+
+            document.getElementById('years').innerText = `${years} anos`;
+            document.getElementById('months').innerText = `${months} meses`;
+            document.getElementById('days').innerText = `${days} dias`;
+            document.getElementById('hours').innerText = `${hours} horas`;
+            document.getElementById('minutes').innerText = `${minutes} minutos`;
+            document.getElementById('seconds').innerText = `${seconds} segundos`;
+        }
+
+
+        setInterval(calculateTime, 1000);
+    </script>
+</body>
+
+
+</html>
+
+
+
